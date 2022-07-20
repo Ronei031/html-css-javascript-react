@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        table td, table th{
+            border: 1px solid gray;
+            padding: 5px;
+            text-align: left;
+        }
+        table{
+            border-collapse: collapse;
+            width: 800px;
+        }
+        body{
+            font-family: sans-serif;
+        }
+        table caption{
+            caption-side: bottom; /*Caption ficar em cima da tabela*/
+            text-align: left; /*Alinhar o texto da caption para esquerda*/
+            font-style: italic; /*Tipo da font*/
+            font-size: 14px; /*Tamanho da font da caption*/
+            margin: 5px; /*espaçamento de baixo*/
+        }
+        tfoot td {
+            background-color: rgb(166, 166, 166);
+        }
+        .responsive-table{
+            max-width: 100%;
+            overflow-x: auto; /*Para arrasatar somente e tabela para o lado e não movimentar o restante do site*/
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <p>Essa é minha tabela: </p>
+    <div class="responsive-table">
+    <table>
+        <caption>Tabela de consumo</caption>
+        <thead>
+            <tr>
+                <th>Titúlo 1</th>
+                <th>Titúlo 2</th>
+                <th>Titúlo 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Corpo 1</td>
+                <td>Corpo 2</td>
+                <td>Corpo 3</td>
+            </tr>
+            <tr>
+                <td>Corpo 1</td>
+                <td colspan="2">Corpo 3</td>
+            </tr>
+            <tr>
+                <td>Corpo 1</td>
+                <td>Corpo 2</td>
+                <td>Corpo 3</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Corpo 1</td>
+                <td>Corpo 2</td>
+                <td>Corpo 3</td>
+            </tr>
+        </tfoot>
+    </table>
+    </div>
+</body>
+</html>
